@@ -16,6 +16,9 @@ export const Login = () => {
     const handleLogin = () => {
         if(ctxContext?.email === emailInput && ctxContext?.passworld === passworldInput) {
             navigate('/logado')
+        } 
+        if(emailInput === '' && passworldInput === '') {
+            alert('Usuário não cadastrado!')
         }
     }
     

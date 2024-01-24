@@ -14,6 +14,9 @@ export const Register = () => {
     const handleRegister = () => {
         if(ctxContext?.name !== '' && ctxContext?.email !== '' && ctxContext?.passworld !== '') {
             navigate('/');
+        } 
+        if(ctxContext?.name === '' && ctxContext?.email === '' && ctxContext?.passworld === '') {
+            return alert('Preencha todos os campos.')
         }
     }
 

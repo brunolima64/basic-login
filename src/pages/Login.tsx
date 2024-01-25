@@ -10,8 +10,6 @@ import darkImg from '../assets/dark.png';
 import { Context } from "../contexts/Context";
 import { ThemeContext } from "../contexts/ThemeContext";
 
-import { ThemeType } from "../types/ThemeType";
-
 
 
 export const Login = () => {

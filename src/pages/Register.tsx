@@ -5,11 +5,14 @@ import '../styles/Login.css'
 
 import  landImg  from '../svgs/signup-303cbb9e.svg'
 import { Context } from "../contexts/Context";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 
 export const Register = () => {
     const navigate = useNavigate();
+
     const ctxContext = useContext(Context);
+    const ctxTheme = useContext(ThemeContext);
 
     const handleRegister = () => {
         if(ctxContext?.name !== '' && ctxContext?.email !== '' && ctxContext?.passworld !== '') {
@@ -21,10 +24,10 @@ export const Register = () => {
     }
 
     return (
-    <div>
-            <h3 className="title">BasicLogin</h3>
+    <div className={ctxTheme?.themes === 'light' ? 'light' : 'dark'}>
+            <h3 className={ctxTheme?.themes === 'light' ? 'title-light' : 'title-dark'}>BasicLogin</h3>
         <div className="geral-login">
-            <div className="area-login">
+            <div className={ctxTheme?.themes === 'light' ? 'area-login-light' : 'area-login-dark'}>
                 <h1>Cadastrar-se</h1>
                 <div className="input-area">
                 

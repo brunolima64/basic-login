@@ -9,6 +9,7 @@
 .light {
     width: 100vw;
     height: 100vh;
+    position: absolute;
     background-color: #fff;
     color: black;
 }
@@ -130,6 +131,9 @@ button:hover  {
 }
 
 @media (max-width: 1000px) {
+    .dark {
+        height: 100%;
+    }
     .header img {
         display: block;
     }
